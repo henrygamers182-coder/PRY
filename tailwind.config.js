@@ -1,0 +1,125 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        pry: {
+          50: '#eef6ff',
+          100: '#d9eaff',
+          200: '#bcd9ff',
+          300: '#8ec1ff',
+          400: '#599dff',
+          500: '#3478f6',
+          600: '#1f5af0',
+          700: '#1746dc',
+          800: '#193bb2',
+          900: '#1a358c',
+          950: '#152155',
+        },
+        neon: {
+          cyan: '#22d3ee',
+          pink: '#f472b6',
+          green: '#34d399',
+          amber: '#fbbf24',
+          violet: '#a78bfa',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.4s ease-out',
+        'slide-up': 'slideUp 0.4s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'glow': 'glow 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'gradient-x': 'gradientX 4s ease infinite',
+        'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
+        'logo-zap': 'logoZap 3s ease-in-out infinite',
+        'logo-spin': 'logoSpin 8s linear infinite',
+        'aurora-1': 'aurora1 18s ease-in-out infinite',
+        'aurora-2': 'aurora2 22s ease-in-out infinite',
+        'aurora-3': 'aurora3 26s ease-in-out infinite',
+        'aurora-4': 'aurora4 20s ease-in-out infinite',
+        'aurora-shift': 'auroraShift 12s ease-in-out infinite',
+        'aurora-ribbon-1': 'auroraRibbon1 14s ease-in-out infinite',
+        'aurora-ribbon-2': 'auroraRibbon2 18s ease-in-out infinite',
+        'aurora-ribbon-3': 'auroraRibbon3 22s ease-in-out infinite',
+        'aurora-ribbon-4': 'auroraRibbon4 16s ease-in-out infinite',
+        'aurora-glow': 'auroraGlow 8s ease-in-out infinite',
+        'aurora-drift': 'auroraDrift 30s linear infinite',
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        slideDown: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        glow: { '0%, 100%': { opacity: '0.3' }, '50%': { opacity: '0.6' } },
+        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+        gradientX: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
+        pulseGlow: { '0%, 100%': { boxShadow: '0 0 20px rgba(52,120,246,0.3)' }, '50%': { boxShadow: '0 0 40px rgba(52,120,246,0.6)' } },
+        logoZap: {
+          '0%, 100%': { transform: 'scale(1) rotate(0deg)', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.5))' },
+          '25%': { transform: 'scale(1.15) rotate(-8deg)', filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))' },
+          '50%': { transform: 'scale(1) rotate(0deg)', filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.5))' },
+          '75%': { transform: 'scale(1.1) rotate(8deg)', filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.7))' },
+        },
+        logoSpin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        aurora1: {
+          '0%, 100%': { transform: 'translate(0%, 0%) scale(1) rotate(0deg)', opacity: '0.35' },
+          '33%': { transform: 'translate(15%, -10%) scale(1.3) rotate(15deg)', opacity: '0.55' },
+          '66%': { transform: 'translate(-10%, 15%) scale(0.9) rotate(-10deg)', opacity: '0.25' },
+        },
+        aurora2: {
+          '0%, 100%': { transform: 'translate(0%, 0%) scale(1) rotate(0deg)', opacity: '0.3' },
+          '50%': { transform: 'translate(-20%, 20%) scale(1.4) rotate(-20deg)', opacity: '0.5' },
+        },
+        aurora3: {
+          '0%, 100%': { transform: 'translate(0%, 0%) scale(1.1) rotate(5deg)', opacity: '0.25' },
+          '40%': { transform: 'translate(20%, -15%) scale(0.8) rotate(25deg)', opacity: '0.45' },
+          '80%': { transform: 'translate(-15%, 10%) scale(1.2) rotate(-15deg)', opacity: '0.2' },
+        },
+        aurora4: {
+          '0%, 100%': { transform: 'translate(0%, 0%) scale(1) rotate(-5deg)', opacity: '0.2' },
+          '50%': { transform: 'translate(10%, -20%) scale(1.3) rotate(20deg)', opacity: '0.4' },
+        },
+        auroraShift: {
+          '0%, 100%': { filter: 'hue-rotate(0deg)' },
+          '50%': { filter: 'hue-rotate(40deg)' },
+        },
+        auroraRibbon1: {
+          '0%, 100%': { transform: 'translateY(0) scaleY(1) skewX(-12deg)', opacity: '0.5' },
+          '33%': { transform: 'translateY(-8%) scaleY(1.3) skewX(-18deg)', opacity: '0.8' },
+          '66%': { transform: 'translateY(5%) scaleY(0.85) skewX(-8deg)', opacity: '0.35' },
+        },
+        auroraRibbon2: {
+          '0%, 100%': { transform: 'translateY(0) scaleY(1) skewX(15deg)', opacity: '0.4' },
+          '50%': { transform: 'translateY(-12%) scaleY(1.4) skewX(22deg)', opacity: '0.7' },
+        },
+        auroraRibbon3: {
+          '0%, 100%': { transform: 'translateY(0) scaleY(1.1) skewX(-20deg)', opacity: '0.3' },
+          '40%': { transform: 'translateY(10%) scaleY(0.8) skewX(-10deg)', opacity: '0.6' },
+          '80%': { transform: 'translateY(-6%) scaleY(1.2) skewX(-25deg)', opacity: '0.25' },
+        },
+        auroraRibbon4: {
+          '0%, 100%': { transform: 'translateY(0) scaleY(1) skewX(10deg)', opacity: '0.35' },
+          '50%': { transform: 'translateY(-15%) scaleY(1.35) skewX(18deg)', opacity: '0.65' },
+        },
+        auroraGlow: {
+          '0%, 100%': { opacity: '0.3', filter: 'blur(40px)' },
+          '50%': { opacity: '0.6', filter: 'blur(60px)' },
+        },
+        auroraDrift: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
